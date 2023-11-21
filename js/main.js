@@ -84,7 +84,9 @@ for (let i = 0; i < imagesArray.length; i++) {
     }"><div class = "caption"><h2>${images[i].titolo}</h2><br><span>${
       images[i].descrizione
     }</span></div></div>`;
-    thumbnail += `<div class = "thumbnail overlay"><img src = "${images[i].url}" alt = "img${i}"></div>`;
+    thumbnail += `<div class = "thumbnail overlay"><img src = "${
+      images[i].url
+    }" alt = "img${i + 1}"></div>`;
   }
 }
 
@@ -125,14 +127,16 @@ pause.addEventListener('click', function () {
 
 // Aggiungo l'EL al padre per gestire i click ai figli passando il parametro event alla funzione anonima
 thumbnailsContainer.addEventListener('click', function (event) {
-  console.log(domItem[0].childNodes[0].alt);
-  console.log(event);
-  for (let i = 0; i < domItem.length; i++)
-    if (event.target.childNodes.alt === domItem[i].childNodes[i].alt) {
+  // console.log(domItem[0].childNodes[0].alt);
+  // console.log(event.target.childNodes[0].alt);
+  for (let i = 0; i < domItem.length; i++) {
+    if (event.target.childNodes[0].alt === domItem[i].childNodes[0].alt) {
+      console.log(domItem[i].childNodes[0].alt);
       domItem[counter].classList.remove('active');
       domThumbnails[counter].classList.add('overlay');
       counter = i;
       domItem[counter].classList.add('active');
       domThumbnails[counter].classList.remove('overlay');
     }
+  }
 });
