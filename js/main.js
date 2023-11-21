@@ -128,7 +128,7 @@ thumbnailsContainer.addEventListener('click', function (event) {
   console.log(domItem[0].childNodes[0].alt);
   console.log(event);
   for (let i = 0; i < domItem.length; i++)
-    if (event.target.innerHTML === domItem[i].childNodes[i].alt) {
+    if (event.target.childNodes.alt === domItem[i].childNodes[i].alt) {
       domItem[counter].classList.remove('active');
       domThumbnails[counter].classList.add('overlay');
       counter = i;
