@@ -25,12 +25,47 @@ function changeSlidePrev() {
 }
 
 /* Program */
+
+// Variables
 const imagesArray = ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg'];
 const items = document.querySelector('.items');
 let counter = 0;
 let item = '';
 let thumbnail = '';
+const caption = [
+  {
+    url: 'img/01.jpg',
+    titolo: 'test01',
+    descrizione:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nisi odit ab aspernatur.',
+  },
+  {
+    url: 'img/02.jpg',
+    titolo: 'test02',
+    descrizione:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas aliquam fugiat tenetur dignissimos labore ratione delectus?',
+  },
+  {
+    url: 'img/03.jpg',
+    titolo: 'test03',
+    descrizione:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia corrupti, hic nesciunt, consequatur.',
+  },
+  {
+    url: 'img/04.jpg',
+    titolo: 'test04',
+    descrizione:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloribus exercitationem.',
+  },
+  {
+    url: 'img/05.jpg',
+    titolo: 'test05',
+    descrizione:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, porro eum ex nobis beatae blanditiis iure.',
+  },
+];
 
+// Execution
 for (let i = 0; i < imagesArray.length; i++) {
   if (i === 0) {
     item += `<div class = "item active"><img src = "img/${imagesArray[i]}" alt = "img${i}"></div>`;
