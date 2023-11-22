@@ -67,7 +67,7 @@ const images = [
 ];
 
 // Program
-// Aggiungione immagini tramite interpolazione di stringhe
+// Aggiungione immagini tramite interpolazione di stringhe o template literal
 for (let i = 0; i < images.length; i++) {
   if (i === 0) {
     item += `<div class = "item active"><img src = "${
