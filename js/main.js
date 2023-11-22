@@ -27,8 +27,7 @@ function changeSlidePrev() {
 /* Program */
 
 // Variables
-const imagesArray = ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg'];
-const items = document.querySelector('.items');
+// const imagesArray = ['01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg'];
 let counter = 0;
 let item = '';
 let thumbnail = '';
@@ -127,8 +126,6 @@ pause.addEventListener('click', function () {
 
 // Aggiungo l'EL al padre per gestire i click ai figli passando il parametro event alla funzione anonima
 thumbnailsContainer.addEventListener('click', function (event) {
-  // console.log(domItem[0].childNodes[0].alt);
-  // console.log(event.target.childNodes[0].alt);
   for (let i = 0; i < domItem.length; i++) {
     if (event.target.childNodes[0].alt === domItem[i].childNodes[0].alt) {
       domItem[counter].classList.remove('active');
